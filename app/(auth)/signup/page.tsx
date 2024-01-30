@@ -167,7 +167,7 @@ const SignUp = () => {
                       placeholder="Tron (Trx) Receivers Wallet Address" label={""}                />
 </div>
 
-<div className="pt-6 pb-24">
+<div className="md:pt-6 pb-24">
  
 <Input
                       register={register}
