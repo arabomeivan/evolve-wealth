@@ -285,14 +285,52 @@ export default function Home() {
 
       <div className="text-4xl text-primary font-bold my-10">Meet our Team</div>
       <div className="py-10 carousel flex">
+      <div className="grid md:grid-cols-2">
+          <div className="flex">
+            <div className=" self-center md:self-auto space-y-5 md:space-y-0">
+              <Image
+                src={eclipse}
+                width={261}
+                height={261}
+                alt="not loading"
+                className=" absolute eclipse mt-[10px] md:mt-[234px]"
+              />
+              <Image
+                src={man}
+                width={500}
+                height={500}
+                alt="not loading"
+                className=" rounded-sm"
+              />
+            </div>
+          </div>
 
-      <Swiper
+          <div className="text-justify flex">
+            <div className="self-center">
+              <p className="text-primary font-bold md:text-xl">Joseph Larry</p>
+              <p className="text-grey mb-10 md:text-xl">
+                CEO Evolve Wealth Group
+              </p>
+
+              <p className="text-purple font-bold">
+                CEO of Evolve Ventures, a leading firm in the crypto investment
+                space. Joseph leads a team of experts in navigating the dynamic
+                world of cryptocurrency investments. With a deep understanding
+                of blockchain technology and market trends, he strategically
+                manages digital asset portfolios, ensuring optimal returns for
+                clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      {/* <Swiper
       spaceBetween={50}
       slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><div className="grid md:grid-cols-2">
+      <SwiperSlide>
+        <div className="grid md:grid-cols-2">
           <div className="flex">
             <div className=" self-center md:self-auto space-y-5 md:space-y-0">
               <Image
@@ -445,7 +483,7 @@ export default function Home() {
           </div>
         </div></SwiperSlide>
       ...
-    </Swiper>
+    </Swiper> */}
 
         
         
