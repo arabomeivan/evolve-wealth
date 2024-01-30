@@ -9,7 +9,6 @@ import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import signupimg from "../../../assets/signupimg.png";
 import googleImg from "../../../assets/google.webp";
-//import Form from "@/components/form/Form";
 import Input from "@/components/Inputs/Input";
 //import { FormButton } from "@/components/button/Button";
 
@@ -56,7 +55,7 @@ const SignUp = () => {
                   <button
                     onClick={() => signIn("google")}
                     className=" flex items-center justify-center space-x-5 w-full text-sm px-4 py-4 tracking-wide
-                 transition-colors duration-200 transform bg-[#F4F7FE] rounded-md focus:outline-none"
+                 transition-colors duration-200 transform bg-[#F4F7FE] rounded-2xl focus:outline-none"
                   >
                     <Image
                       src={googleImg}
@@ -113,7 +112,7 @@ const SignUp = () => {
                 <div className="mt-6">
                   <button
                     className={`w-full text-sm px-4 py-4 tracking-wide text-white transition-colors duration-200
-                 transform rounded-md focus:outline-none  bg-[#4318FF]
+                 transform rounded-2xl focus:outline-none  bg-[#4318FF]
                   
                  `}
                   >
