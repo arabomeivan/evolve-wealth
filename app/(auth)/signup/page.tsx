@@ -6,11 +6,10 @@ import { useState } from "react";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
-import { useSession } from "next-auth/react";
 import signupimg from "../../../assets/signupimg.png";
 import googleImg from "../../../assets/google.webp";
 import Input from "@/components/Inputs/Input";
-//import { FormButton } from "@/components/button/Button";
+import toast, { Toaster } from "react-hot-toast";
 
 const SignUp = () => {
   const router = useRouter();
@@ -20,7 +19,6 @@ const SignUp = () => {
     formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
-      name: "",
       email: "",
       password: "",
     },
@@ -30,18 +28,30 @@ const SignUp = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setisLoading(true);
-    axios
-      .post("/api/register", data)
-      .then(() => router.push("/login"))
-      .catch((error) => {
-        console.log(error);
-      });
+    const predefinedEmail = "user@example.com";
+    const predefinedPassword = "password123";
+
+    if (
+      data.email === predefinedEmail &&
+      data.password === predefinedPassword
+    ) {
+      // Login successful, you can redirect or perform other actions here
+      toast.success("Logged In Successfully");
+      router.refresh();
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
+    } else {
+      // Display an error message if credentials don't match
+      toast.error("Invalid email or password");
+    }
     setisLoading(false);
   };
 
   return (
     <div className="md:flex items-center">
       <div>
+        <Toaster />
         <p className="text-xs text-center text-[#A3AED0]">Back to dashboard</p>
         <div className=" md:w-[50vw] p-14 md:px-36 md:py-10">
           <div className="relative flex flex-col items-center justify-center overflow-hidden">
