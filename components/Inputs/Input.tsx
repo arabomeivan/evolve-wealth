@@ -30,7 +30,7 @@ const Input = ({ id, label, placeholder, type, register }: InputProps) => {
         {...register(id, { required: true })}
         placeholder={placeholder}
         required
-        className={`block w-full px-4 py-4 mt-2 bg-white border text-sm rounded-md
+        className={`block w-full px-4 py-4 mt-2 bg-white border text-sm rounded-2xl
                    focus:border-[#015E5F] focus:outline-none
                    ${errors[id] ? "border-red-500" : "border-gray-400"}
                    `}
