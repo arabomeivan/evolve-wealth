@@ -4,7 +4,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const montserrat = Montserrat({ display: 'swap', subsets: ['latin'] });
+const montserrat = Montserrat({ display: "swap", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Evolve Wealth",
@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body>
-      <NavBar></NavBar>
-      <div className="container pt-40 pb-5">{children}</div>
-      <Footer></Footer>
+        <NavBar></NavBar>
+        <div className="">{children}</div>
+        <Footer></Footer>
       </body>
     </html>
   );
