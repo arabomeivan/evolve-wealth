@@ -82,7 +82,7 @@ const SignUp = () => {
                   placeholder="Min. 8 characters"
                 />
 
-                <div className="mt-6">
+                <div className="mt-6 hidden md:block">
                   <button
                     className={`w-full text-sm px-4 py-4 tracking-wide text-white transition-colors duration-200
                  transform rounded-2xl focus:outline-none  bg-[#4318FF]
@@ -92,7 +92,7 @@ const SignUp = () => {
                     Submit
                   </button>
                 </div>
-                <p className="mt-4 text-sm text-start text-gray-700">
+                <p className="mt-4 text-sm text-start text-gray-700 hidden md:block">
                 Already have an account?{" "}
                 <Link
                   href="/login"
@@ -149,12 +149,13 @@ const SignUp = () => {
                       placeholder="Tron (Trx) Receivers Wallet Address" label={""}                />
 </div>
 
-<div>
+<div className="pt-6 pb-24">
+ 
 <Input
                       register={register}
                       id="password"
                       type="text"
-                      placeholder="USDT TRC20 Receivers Wallet Address" label="Transfer"                />
+                      placeholder="USDT TRC20 Receivers Wallet Address" label=""                />
 
 <Input
                       register={register}
@@ -180,8 +181,29 @@ const SignUp = () => {
                       id="password"
                       type="password"
                       placeholder="Referral link" label={""}                />
+
+<div className="mt-6 md:hidden">
+                  <button
+                    className={`w-full text-sm px-4 py-4 tracking-wide text-white transition-colors duration-200
+                 transform rounded-2xl focus:outline-none  bg-[#4318FF]
+                  
+                 `}
+                  >
+                    Submit
+                  </button>
+                </div>
+                <p className="mt-4 text-sm text-start text-gray-700 md:hidden block">
+                Already have an account?{" "}
+                <Link
+                  href="/login"
+                  className="font-medium text-[#4318FF] hover:underline"
+                >
+                  Sign In
+                </Link>
+              </p>
 </div>
 </div>
+
       </div>
     </div>
   );
