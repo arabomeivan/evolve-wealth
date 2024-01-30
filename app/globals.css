@@ -28,7 +28,7 @@
 }
 .carousel
 {
-  overflow-x: 1;
+  overflow-x: auto !important;
   
   /* background: url(../assets/right_bacground_oval.png);
   background-size: auto;

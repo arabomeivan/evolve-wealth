@@ -10,7 +10,7 @@ function NavBar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const isSignupPage = pathname.startsWith("/signup");
+  const isSignupPage = pathname.startsWith("/login");
   const [scrolled, setScrolled] = useState(false);
   const [toggle, setToggle] = useState(false);
 
@@ -99,7 +99,7 @@ function NavBar() {
 
               <div className="flex">
                 <button
-                  onClick={() => router.push("/signup")}
+                  onClick={() => router.push("/login")}
                   className="middle none center self-center rounded-lg px-6 connect-btn text-white h-[34px]"
                   data-ripple-light="true"
                 >

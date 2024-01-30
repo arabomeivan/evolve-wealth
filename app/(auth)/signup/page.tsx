@@ -49,42 +49,18 @@ const SignUp = () => {
   };
 
   return (
-    <div className="md:flex items-center">
+    <div className="container py-28">
       <div>
-        <Toaster />
-        <p className="text-xs text-center text-[#A3AED0]">Back to dashboard</p>
-        <div className=" md:w-[50vw] p-14 md:px-36 md:py-10">
-          <div className="relative flex flex-col items-center justify-center overflow-hidden">
-            <div className="w-full lg:max-w-xl">
-              <h1 className="text-3xl font-semibold text-[#2B3674]">Sign In</h1>
+      <Toaster />
+        {/* <p className="text-xs text-center text-[#A3AED0]">Back to dashboard</p> */}
+        <h1 className="text-3xl font-semibold text-[#2B3674]">Sign Up</h1>
               <h4 className="text-base text-[#A3AED0]">
-                Enter your email and password to sign in!
+                Its simple and easy
               </h4>
-              <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
-                <div className="mt-4">
-                  <button
-                    onClick={() => signIn("google")}
-                    className=" flex items-center justify-center space-x-5 w-full text-sm px-4 py-4 tracking-wide
-                 transition-colors duration-200 transform bg-[#F4F7FE] rounded-2xl focus:outline-none"
-                  >
-                    <Image
-                      src={googleImg}
-                      width={25}
-                      height={25}
-                      alt="google-login"
-                    />
-                    <p>Sign up with Google</p>
-                  </button>
-                </div>
-                <div className="flex items-center justify-center my-8 space-x-2">
-                  <div className="flex-1 h-[1px] bg-gray-500"></div>
-                  <p className="text-sm text-center text-gray-700">
-                    Or, Sign up with
-                  </p>
-                  <div className="flex-1 h-[1px] bg-gray-500"></div>
-                </div>
 
-                <Input
+              <div className="grid md:grid-cols-3 space-y-5 md:space-y-0 md:space-x-5 h-[500px] fixed w-[90%] p-5 overflow-y-auto">
+<div>
+<Input
                   register={register}
                   id="email"
                   label="Email"
@@ -95,29 +71,16 @@ const SignUp = () => {
                   id="password"
                   label="Password"
                   type="password"
-                  placeholder="Enter password"
+                  placeholder="Min. 8 characters"
                 />
 
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      id="myCheckbox"
-                      name="myCheckbox"
-                    ></input>
-                    <p className="text-sm text-start text-gray-700">
-                      Keep me logged in
-                    </p>
-                  </div>
-                  <p className=" text-sm text-start text-gray-700">
-                    <Link
-                      href="/login"
-                      className="font-medium text-[#4318FF] hover:underline"
-                    >
-                      Create an account
-                    </Link>
-                  </p>
-                </div>
+<Input
+                  register={register}
+                  id="password"
+                  label="Confirm Password"
+                  type="password"
+                  placeholder="Min. 8 characters"
+                />
 
                 <div className="mt-6">
                   <button
@@ -126,26 +89,99 @@ const SignUp = () => {
                   
                  `}
                   >
-                    Sign In
+                    Submit
                   </button>
                 </div>
-              </form>
-
-              <p className="mt-4 text-sm text-start text-gray-700">
-                Not registed yet?{" "}
+                <p className="mt-4 text-sm text-start text-gray-700">
+                Already have an account?{" "}
                 <Link
                   href="/login"
                   className="font-medium text-[#4318FF] hover:underline"
                 >
-                  Create an account
+                  Sign In
                 </Link>
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="hidden md:block w-[50vw] relative h-[100vh]">
-        <Image src={signupimg} fill alt="login-image" sizes="100%" />
+</div>
+
+<div>
+<Input
+                  register={register}
+                  id="email"
+                  label="Security Question"
+                  placeholder="Enter"
+                />
+                <Input
+                  register={register}
+                  id="password"
+                  label="Security Answer"
+                  type="text"
+                  placeholder="Enter"
+                />
+
+<Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Bitcoin Receivers Wallet Address" label={""}                />
+
+<Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Bitcoin Receivers Wallet Address" label={""}                />
+
+<Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Ethereum Receivers Wallet Address" label={""}                />
+
+<Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Dogecoin Receivers Wallet Address" label={""}                />
+
+                      <Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Tron (Trx) Receivers Wallet Address" label={""}                />
+</div>
+
+<div>
+<Input
+                      register={register}
+                      id="password"
+                      type="text"
+                      placeholder="USDT TRC20 Receivers Wallet Address" label="Transfer"                />
+
+<Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Bitcoin cash  Receivers Wallet Address" label={""}                />
+
+<Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="BNB Smart Chain Receivers Wallet Address" label={""}                />
+
+<Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Tron(TRX) Receivers Wallet Address" label={""}                />
+
+
+                      <Input
+                      register={register}
+                      id="password"
+                      type="password"
+                      placeholder="Referral link" label={""}                />
+</div>
+</div>
       </div>
     </div>
   );

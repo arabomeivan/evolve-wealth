@@ -18,10 +18,41 @@ import man from "../assets/man.png";
 import img_6 from "../assets/img_6.png";
 import vector_1 from "../assets/vector_1.png";
 import vector_2 from "../assets/vector_2.png";
-import vector_3 from "../assets/vector_3.png";
+import { useRouter } from "next/navigation";
 import vector_4 from "../assets/vector_4.png";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 
 export default function Home() {
+  const router = useRouter();
+  // const containerRef = useRef(null);
+
+  // useEffect(() => {
+  //   const container = containerRef.current;
+  //   let scrollInterval;
+
+  //   const scrollRight = () => {
+  //     if (container) {
+  //       container.scrollLeft += 1; // Adjust the scroll speed as needed
+  //       if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+  //         container.scrollLeft = 0; // Reset to the beginning if reached the end
+  //       }
+  //     }
+  //   };
+
+  //   // Start automatic scrolling after 2 seconds and repeat every 50 milliseconds
+  //   setTimeout(() => {
+  //     scrollInterval = setInterval(scrollRight, 50); // Adjust the interval as needed
+  //   }, 2000);
+
+  //   return () => {
+  //     clearInterval(scrollInterval); // Cleanup interval on component unmount
+  //   };
+  // }, []);
+
   interface prices {
     plan_name: string;
     price: string;
@@ -75,6 +106,7 @@ export default function Home() {
 
           <div className="flex space-x-2">
             <button
+             onClick={() => router.push("/signup")}
               className="middle none center shadow-md self-center rounded-lg py-2 px-6  base-btn  text-white"
               data-ripple-light="true"
             >
@@ -253,7 +285,14 @@ export default function Home() {
 
       <div className="text-4xl text-primary font-bold my-10">Meet our Team</div>
       <div className="py-10 carousel flex">
-        <div className="grid md:grid-cols-2">
+
+      <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      <SwiperSlide><div className="grid md:grid-cols-2">
           <div className="flex">
             <div className=" self-center md:self-auto space-y-5 md:space-y-0">
               <Image
@@ -290,7 +329,126 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </div></SwiperSlide>
+      <SwiperSlide><div className="grid md:grid-cols-2">
+          <div className="flex">
+            <div className=" self-center md:self-auto space-y-5 md:space-y-0">
+              <Image
+                src={eclipse}
+                width={261}
+                height={261}
+                alt="not loading"
+                className=" absolute eclipse mt-[10px] md:mt-[234px]"
+              />
+              <Image
+                src={man}
+                width={500}
+                height={500}
+                alt="not loading"
+                className=" rounded-sm"
+              />
+            </div>
+          </div>
+
+          <div className="text-justify flex">
+            <div className="self-center">
+              <p className="text-primary font-bold md:text-xl">Joseph Larry</p>
+              <p className="text-grey mb-10 md:text-xl">
+                CEO Evolve Wealth Group
+              </p>
+
+              <p className="text-purple font-bold">
+                CEO of Evolve Ventures, a leading firm in the crypto investment
+                space. Joseph leads a team of experts in navigating the dynamic
+                world of cryptocurrency investments. With a deep understanding
+                of blockchain technology and market trends, he strategically
+                manages digital asset portfolios, ensuring optimal returns for
+                clients.
+              </p>
+            </div>
+          </div>
+        </div></SwiperSlide>
+      <SwiperSlide><div className="grid md:grid-cols-2">
+          <div className="flex">
+            <div className=" self-center md:self-auto space-y-5 md:space-y-0">
+              <Image
+                src={eclipse}
+                width={261}
+                height={261}
+                alt="not loading"
+                className=" absolute eclipse mt-[10px] md:mt-[234px]"
+              />
+              <Image
+                src={man}
+                width={500}
+                height={500}
+                alt="not loading"
+                className=" rounded-sm"
+              />
+            </div>
+          </div>
+
+          <div className="text-justify flex">
+            <div className="self-center">
+              <p className="text-primary font-bold md:text-xl">Joseph Larry</p>
+              <p className="text-grey mb-10 md:text-xl">
+                CEO Evolve Wealth Group
+              </p>
+
+              <p className="text-purple font-bold">
+                CEO of Evolve Ventures, a leading firm in the crypto investment
+                space. Joseph leads a team of experts in navigating the dynamic
+                world of cryptocurrency investments. With a deep understanding
+                of blockchain technology and market trends, he strategically
+                manages digital asset portfolios, ensuring optimal returns for
+                clients.
+              </p>
+            </div>
+          </div>
+        </div></SwiperSlide>
+      <SwiperSlide><div className="grid md:grid-cols-2">
+          <div className="flex">
+            <div className=" self-center md:self-auto space-y-5 md:space-y-0">
+              <Image
+                src={eclipse}
+                width={261}
+                height={261}
+                alt="not loading"
+                className=" absolute eclipse mt-[10px] md:mt-[234px]"
+              />
+              <Image
+                src={man}
+                width={500}
+                height={500}
+                alt="not loading"
+                className=" rounded-sm"
+              />
+            </div>
+          </div>
+
+          <div className="text-justify flex">
+            <div className="self-center">
+              <p className="text-primary font-bold md:text-xl">Joseph Larry</p>
+              <p className="text-grey mb-10 md:text-xl">
+                CEO Evolve Wealth Group
+              </p>
+
+              <p className="text-purple font-bold">
+                CEO of Evolve Ventures, a leading firm in the crypto investment
+                space. Joseph leads a team of experts in navigating the dynamic
+                world of cryptocurrency investments. With a deep understanding
+                of blockchain technology and market trends, he strategically
+                manages digital asset portfolios, ensuring optimal returns for
+                clients.
+              </p>
+            </div>
+          </div>
+        </div></SwiperSlide>
+      ...
+    </Swiper>
+
+        
+        
       </div>
 
       {/* Fifth Section */}
