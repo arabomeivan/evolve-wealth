@@ -28,7 +28,8 @@
 }
 .carousel
 {
-  overflow-x: auto;
+  overflow-x: 1;
+  
   /* background: url(../assets/right_bacground_oval.png);
   background-size: auto;
   background-repeat: no-repeat; */
@@ -83,6 +84,7 @@ a:hover, .activeLink
 .third-section
 {
   background: url(../assets/purple_background.png);
+ 
 }
 .title
 {
@@ -131,4 +133,11 @@ a:hover, .activeLink
   background-color: #FA923C;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .third-section
+  {
+    background: linear-gradient(96deg, rgba(81, 79, 255, 0.20) 10.25%, rgba(61, 0, 189, 0.51) 90.25%);
+  }
 }

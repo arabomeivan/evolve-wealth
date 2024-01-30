@@ -23,11 +23,14 @@ import vector_4 from '../assets/vector_4.png'
 
 export default function Home() {
 
+  
+
   interface prices
   {
     plan_name: string,
     price: string,
-    daily_profit: string,
+    profit_title: string,
+    profit: string,
     contract_life: string,
     referral_bonus: string,
 
@@ -36,25 +39,19 @@ export default function Home() {
   let pricing: prices[]=
   [
    {
-    plan_name: "17 Minutes Plan",
+    plan_name: "A Day  Plan",
     price: "$50 - 100",
-    daily_profit: "5%",
-    contract_life: "17 minutes",
-    referral_bonus: "10%"
-
-   },
-   {
-    plan_name: "17 Minutes Plan",
-    price: "$50 - 100",
-    daily_profit: "5%",
-    contract_life: "17 minutes",
+    profit_title: "Daily Profit",
+    profit: "5%",
+    contract_life: "24hrs",
     referral_bonus: "10%"
 
    },
    {
     plan_name: "A week Plan",
     price: "$350 - 5000",
-    daily_profit: "5%",
+    profit_title: "Weekly Profit",
+    profit: "10%",
     contract_life: "7 Days",
     referral_bonus: "10%"
 
@@ -62,7 +59,8 @@ export default function Home() {
    {
     plan_name: "1 Month Plan",
     price: "$5,500 - 50,000",
-    daily_profit: "5%",
+    profit_title: "Monthly Profit",
+    profit: "15%",
     contract_life: "30 Days",
     referral_bonus: "10%"
 
@@ -89,7 +87,7 @@ export default function Home() {
   className="middle none center shadow-md self-center rounded-lg py-2 px-6  base-btn  text-white"
   data-ripple-light="true"
 >
-Invest
+Get Started
 </button>
 
 <button
@@ -119,7 +117,7 @@ Profit Calculator
   </div>
 
 {/* Second Section */}
-  <div className="mt-7 py-10 bg-cover bg-no-repeat second-section">
+  <div className="mt-7 py-10 mb-10 bg-cover bg-no-repeat second-section">
 
 <p className="text-[#A8A5CA] text-center pb-20">
 Get YOUR SPOT NOW AND START Investing LIKE A PRO
@@ -193,7 +191,7 @@ Get YOUR SPOT NOW AND START Investing LIKE A PRO
   Why Our Investment Program is the Fastest Way to Wealth
   </p>
   </div>
-  <div className="grid md:grid-cols-3 space-x-2">
+  <div className="grid md:grid-cols-3 space-x-2 space-y-10 md:space-y-0 p-5">
 <div className="text-center">
 <div className="mb-32">
   <Image
@@ -279,6 +277,7 @@ Get YOUR SPOT NOW AND START Investing LIKE A PRO
   Meet our Team
 </div>
 <div className="py-10 carousel flex">
+
 <div className="grid md:grid-cols-2">
 <div className="flex">
   <div className=" self-center md:self-auto space-y-5 md:space-y-0">
@@ -312,6 +311,8 @@ CEO of Evolve Ventures, a leading firm in the crypto investment space. Joseph le
 
 </div>
 </div>
+
+
 </div>
 
 
@@ -322,7 +323,7 @@ CEO of Evolve Ventures, a leading firm in the crypto investment space. Joseph le
   Offers and Plans
 </p>
 
-<div className="block md:flex md:space-x-2 space-y-2 md:space-y-0 justify-center">
+<div className="block md:flex md:space-x-8 space-y-5 md:space-y-0 justify-center">
 {
   pricing.map((pricing, index)=>(
 <div key={index} className="card text-center md:text-justify p-6 bg-[#B1E9FA] shadow-xl max-w-[333px] rounded-md">
@@ -335,7 +336,7 @@ CEO of Evolve Ventures, a leading firm in the crypto investment space. Joseph le
 </div>
 
 <p className="font-bold mb-5">
-  <span className="text-white">Daily Profit</span>: {pricing.daily_profit}
+  <span className="text-white">{pricing.profit_title}</span>: {pricing.profit}
 </p>
 <p className="font-bold mb-5">
   <span className="text-white">Contract Life</span>: {pricing.contract_life}

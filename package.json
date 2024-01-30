@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "animate.css": "^4.1.1",
     "framer-motion": "^11.0.3",
     "next": "14.1.0",
     "react": "^18",
