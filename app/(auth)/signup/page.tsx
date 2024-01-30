@@ -63,6 +63,24 @@ const SignUp = () => {
 <Input
                   register={register}
                   id="email"
+                  label="Username*"
+                  placeholder="Enter your Username"
+                />
+                <Input
+                  register={register}
+                  id="email"
+                  label="First Name *"
+                  placeholder="Enter your First Name"
+                />
+                <Input
+                  register={register}
+                  id="email"
+                  label="Last Name*"
+                  placeholder="Enter your Last Name"
+                />
+<Input
+                  register={register}
+                  id="email"
                   label="Email"
                   placeholder="Enter your email"
                 />
