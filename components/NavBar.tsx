@@ -10,7 +10,7 @@ function NavBar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const isSignupPage = pathname.startsWith("/login");
+  const isSignupPage = pathname && pathname.startsWith("/login");
   const [scrolled, setScrolled] = useState(false);
   const [toggle, setToggle] = useState(false);
 

@@ -5,7 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 function Footer() {
   const pathname = usePathname();
 
-  const isSignupPage = pathname.startsWith("/signup");
+  const isSignupPage = pathname && pathname.startsWith("/signup");
   return (
     <div>
       {!isSignupPage && (
